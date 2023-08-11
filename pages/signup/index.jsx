@@ -3,7 +3,7 @@ import { AlertMsg, Button, Img } from "../../src/components/FromElements";
 import "./index.css";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import NameInput from "../../src/components/FromElements/nameInput";
+import NameInput from "../../src/components/FromElements/NameInput";
 import PasswordInput from "../../src/components/FromElements/PasswordInput";
 import EmailInput from "../../src/components/FromElements/EmailInput";
 import { useDispatch, useSelector } from "react-redux";
