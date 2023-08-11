@@ -16,7 +16,7 @@ import {
 } from "../../../redux/slice/instructorSlice";
 import { useState } from "react";
 import { IconButton } from "@mui/material";
-import VideoPreview from "../Popups/videoPreview";
+import VideoPreview from "../Popups/VideoPreview";
 const ContentAccordion = ({ content, coIndex, chIndex, provided }) => {
   const dispatch = useDispatch();
   const contentLength = useSelector(
