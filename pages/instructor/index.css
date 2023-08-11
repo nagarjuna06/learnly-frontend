@@ -1,0 +1,127 @@
+.instructor-profile{
+    padding: 0px 10px;
+    display: grid;
+    gap: 30px ;
+}
+.instructor-avatar{
+    grid-column-start:span 2 ;
+}
+
+.menu-content{
+    width: 100%;
+    height: 100%;
+    min-height: 60vh;
+    padding: 10px 20px;
+}
+.instructor-course-card-container{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    /* padding-bottom: 30px; */
+}
+.instructor-course{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* padding: 20px 30px; */
+    /* box-shadow: 0px 0px 10px #ccc;
+    border-radius: 10px; */
+}
+.instructor-settings{
+    width: 90%;
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+   font-size: 20px;
+   user-select: none;
+   font-weight: 500;
+   margin: 40px 0px;
+}
+.instructor-settings >div{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 25px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+.drop-down-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.instructor-course-sub{
+    display: flex;
+    gap: 30px;
+}
+.instructor-course-sub>div{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.delete-input{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0px;
+    background-color: #fff;
+}
+.drag-icon{
+    font-size: 18px;
+    opacity: 0;
+    transition: 0.3s;
+}
+.delete-input:hover .drag-icon{
+    opacity: 1;
+}
+.course-settings{
+    display: grid;
+    grid-template-columns: 10fr 6fr 2fr;
+   margin: 10px;
+}
+.course-settings >p{
+    font-weight: 500;
+}
+.settings-publish{
+    display: flex;
+    align-items: center;
+}
+
+.chapter-form{
+    padding: 10px 0px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.chapter-form >p{
+    font-size: 20px;
+    font-weight: 500;
+}
+.chapter-form-btn{
+    display: flex;
+    gap: 10px;
+}
+.curriculum-list{
+    margin: 20px 0px;
+}
+
+.table-checkbox{
+    display: flex;
+    justify-content: flex-end;
+}
+@media (max-width:750px) {
+    .instructor-profile{
+        gap: 30px;
+        padding: 0;
+    }
+    .instructor-profile-input,.my-text-editor{
+        grid-column-start: span 2;
+    }
+}

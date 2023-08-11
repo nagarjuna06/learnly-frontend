@@ -1,0 +1,23 @@
+.page-not-found{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.page-not-found >img{
+    width: 100%;
+    max-width: 650px;
+}
+
+@media (max-width:750px) {
+    .page-not-found{
+        overflow: hidden;
+    }
+    .page-not-found>a{
+        margin-top: 100px;
+    }
+    .page-not-found>img{
+        scale: 1.5;
+    }
+}

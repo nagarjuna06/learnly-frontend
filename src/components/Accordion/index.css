@@ -1,0 +1,130 @@
+.chapter-title{
+    font-weight: 600;
+    font-size: 18px;
+}
+.chapter-desc{
+    display: flex;
+    gap: 10px;
+    color: #888;
+}
+.chapter-desc-edit>p{
+    font-size: 18px;
+}
+.chapter-desc-edit>div{
+    display: flex;
+    gap: 10px;
+    color: #888;
+}
+.content-desc{
+    display: flex;
+    justify-content:space-between;
+}
+.content-desc >div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.content-icon{
+    font-size: 25px;
+}
+.accordion-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.collapse-button{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 3px;
+    align-self: flex-end;
+}
+.collapse-button>p{
+    color: #1976d2;
+    font-weight: 700;
+    cursor: pointer;
+    margin-right: 10px;
+    display: flex;
+    align-items: flex-end;
+}
+.curriculum-accordion{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0px;
+    background-color: #fff;
+}
+.curriculum-accordion:hover>div> .drag-icon{
+    opacity: 1;
+}
+.content-desc:hover .drag-icon{
+    opacity: 1;
+}
+
+.chapter{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.chapter .chapter-title{
+    font-weight:700;
+    font-size: 16px;
+}
+.chapter .chapter-desc{
+    color: #999;
+    font-size: 14px;
+    gap: 5px;
+}
+
+.content-active{
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.content-inactive{
+    cursor: pointer;
+}
+
+@media (max-width:750px){
+    .chapter .chapter-title{
+        font-size: 14px;
+    }
+    .content-desc{
+        font-size: 14px;
+    }
+    .content-icon{
+        font-size: 18px;
+    }
+}
+
+.accordion-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:15px 0px;
+    font-size: 14px;
+}
+.remain-button{
+    width: 100%;
+    margin-top: 20px ;
+    font-weight: 500;
+    border :1px solid;
+    padding: 5px;
+    cursor: pointer;
+}
+@media (max-width:750px) {
+    .chapter-desc{
+        display: none;
+    }
+    .accordion-info{
+        font-size: 14px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .collapse-button{
+        font-size: 13px;
+    }
+}

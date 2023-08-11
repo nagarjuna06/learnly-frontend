@@ -1,0 +1,52 @@
+.large-avatar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    text-align: center;
+}
+.large-avatar >div{
+    height: 300px;
+    width: 300px;
+    padding: 3px;
+}
+.hide{
+    display: none;
+}
+.profile-icons{
+    font-size: 25px;
+    color: #999;
+    padding-right: 8px
+}
+.course-cover-img{
+    max-width: 500px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    height:  300px;
+    overflow: hidden;
+}
+.course-cover-img:hover{
+    opacity: 0.5;
+}
+.course-cover-img img{
+    cursor: pointer;
+    width: 100%;
+    object-fit:cover;
+}
+.main-avatar{
+    width: 50px;
+    height: 50px;
+}
+@media (max-width:750px) {
+    .large-avatar >div{
+        height: 200px;
+        width: 200px;
+    }
+    .hide{
+        display: block;
+    }
+    .main-avatar{
+        height:40px;
+        width: 40px;
+    }
+}

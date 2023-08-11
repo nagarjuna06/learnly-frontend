@@ -1,0 +1,33 @@
+.no-result{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.no-result>img{
+    width: 100%;
+    max-width: 650px;
+}
+
+.search-courses{
+    padding: 30px;
+}
+.search-courses>h1{
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+.search-courses>div{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+@media (max-width:750px) {
+    .search-courses>h1{
+        font-size: 18px;
+        text-align: center;
+    }
+    .search-courses>div{
+        justify-content: center
+    }
+}

@@ -1,0 +1,162 @@
+.logo{
+    width: 160px;
+}
+nav{
+    box-shadow: 0px 0px 15px #999;
+    padding: 15px;
+    z-index: 3;
+    top: 0;
+    position: sticky;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    background-color: #fff;
+}
+.relative{
+    position: relative;
+    box-shadow: 0px 0px 3px #999;
+}
+.filter-section{
+    display: flex; 
+    align-items: center;
+    gap: 30px;
+    
+}
+.btn-section{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.search-input-form{
+   flex-grow: 1;
+}
+nav>div>p{
+    font-size: 18px;
+}
+footer{
+    background: #000;
+    z-index: 2;
+    padding: 20px  100px ;
+}
+footer>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 20px;
+}
+footer .logo{
+    width: 250px;
+    filter:invert(100%)brightness(140%);
+    padding-bottom: 20px;
+}
+.icons-list{
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+}
+.footer-list{
+    display: flex;
+    gap: 20px;
+}
+.footer-list >p{
+    border-right: 2px solid;
+    padding-right: 10px;
+}
+.footer-list >p:last-child{
+    border: 0;
+}
+.develop >a{
+    color: #1976d2;
+}
+.develop>a:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+
+.instructor-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-column-start: span 2;
+    margin-bottom: 30px;
+}
+.instructor-header> h1{
+    font-weight: 500;
+    text-align: left;
+}
+@media (min-width:750px )and (max-width:1200px) {
+    nav>div>p{
+        display: block;
+    }
+    nav{
+        font-size: 14px;
+    }
+}
+@media (max-width:1020px) {
+    .search-input-form{
+        display: none;
+    }
+}
+@media (max-width:750px){
+    .logo{
+        width: 140px;
+    }
+    nav{
+        padding: 10px;
+        box-shadow: 0px 0px 8px #999;
+    }
+    nav>div p{
+        display: none;
+    }
+    .btn-section{
+        gap: 10px;
+    }
+}
+
+@media (min-width:650px) and (max-width:1000px) {
+    
+    footer{
+        font-size: 15px;
+    }
+    footer>div:first-child{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .icons-list{
+        font-size: 18px;
+    }
+}
+@media (max-width:650px) {
+    footer{
+        font-size: 12px;
+        padding: 30px 0px;
+    }
+    footer .logo{
+        width: 140px;
+    }
+    .footer-list{
+        gap: 5px;
+    }
+    .footer-list >p{
+        padding-right: 5px;
+    }
+    footer>div{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .icons-list{
+        font-size: 20px;
+        gap: 18px;
+    }  
+    .develop{
+        font-size: 14px;
+    }
+    .avatar-side-icons{
+        font-size: 20px;
+    }
+    .btn-section{
+        gap: 5px;
+    }
+}

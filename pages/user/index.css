@@ -1,0 +1,93 @@
+.profile-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    height: 70vh;
+    flex-direction: row;
+}
+.profile-form >div{
+    width: 400px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    margin-right: 20px;
+}
+.wishlist{
+    height: 80vh;
+    margin: 20px;
+}
+.wishlist>h1{
+    font-weight: 600;
+}
+.course-wishlist{
+    margin-top: 20px;
+    display: flex;
+    
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+.user-img{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.user-img>img{
+    width: 100%;
+    max-width: 700px;
+}
+.cart-list{
+    display: flex;
+    justify-content: space-around;
+    gap: 80px;
+    margin-top: 40px;
+}
+.cart-list>div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.check-out{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    width: 300px;
+}
+.wishlist{
+    height: 80vh;
+}
+@media (max-width:750px) {
+    .profile-form{
+        flex-direction: column;
+        height: 90vh;
+        align-items: center;
+    }
+    
+    .profile-form >div{
+        width: 90%;
+        margin-right: 0;
+    }
+    .wishlist>h1{
+        font-size: 24px;
+    }
+    .course-wishlist{
+        justify-content: center;
+    }
+    .cart-list{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+    .user-img{
+        overflow: hidden;
+    }
+    .user-img>img{
+    scale: 1.6;
+    }
+}

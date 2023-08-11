@@ -1,0 +1,141 @@
+.error-dialog{
+    background-color: #000000b0;
+}
+.normal-dialog{
+    background-color: #00000000;
+}
+.error-content{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+.error-close{
+    display: flex;
+    justify-content: flex-end;
+}
+.dialog-image{
+    width: 150px;
+}
+.offline-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.offline-content img{
+    width: 100%;
+    max-width: 650px;
+}
+
+.create-course-form{
+    min-width: 300px;
+    display: grid;
+    gap: 30px;
+    padding-top: 20px
+}
+.dialog-actions{
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+.close-icon-div{
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;   
+}
+.close-icon-div>p{
+    align-self: center;
+}
+.content-name{
+    cursor: pointer;
+}
+.content-name:hover{
+    text-decoration: underline;
+    font-weight: 500;
+}
+.fetch-profile{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    min-width: 300px;
+}
+.checkbox-form{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.server-popup{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.server-popup>div{
+    position: relative;
+}
+.server-popup>div>img{
+    position: absolute;
+    width: 65px;
+    top: 5px;
+    right: 4px;
+}
+.rating-popup-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.rating-popup-content>img{
+    width: 50%;
+    max-width: 600px;
+}
+.rating-popup-content>form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-popup{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.search-popup>div{
+    display: flex;
+    justify-content: center;
+}
+.search-popup>div>img{
+    opacity: 0.5;
+    width: 100%;
+    max-width: 400px;
+}
+.search-popup-form{
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width:800px) {
+    .rating-popup-content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+    }
+    .rating-popup-content>img{
+        width: 100%;
+        max-width: 450px;
+    }
+    .rating-popup-content>form>h2{
+        font-size: 20px;
+        /* font-weight: 600; */
+    }
+    .offline-content{
+        overflow: hidden;
+    }
+    .offline-content>img{
+        scale: 1.2;
+    }
+}

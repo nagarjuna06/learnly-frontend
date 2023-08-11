@@ -1,0 +1,128 @@
+.my-learning{
+   height: 80vh;
+   padding:0px 10px;
+}
+.title-rating>h1{
+   font-weight: 600;
+   margin-bottom: 20px;
+}
+.title-rating{
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+}
+.enroll{
+   width: 100%;
+   max-width: 320px;
+   display: flex;
+   align-items: center;
+   border-radius: 5px;
+   box-shadow: 0px 0px 8px #ccc;
+}
+.enroll>div>img{
+   width: 100%;
+   height: 100%;
+}
+.enroll>p{
+   align-self: flex-end;
+}
+.learning-main{
+   display: grid;
+   grid-template-columns: 7fr 6fr;
+   gap: 20px;
+   height: 60vh;
+}
+.learning-curriculum{
+   height: 75vh;
+   overflow-y:auto ;
+}
+.learning-curriculum-head>h3{
+   font-size: 20px;
+   font-weight: 700;
+}
+.accordion-learn{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.accordion-learn>h3{
+   font-weight: 500;
+}
+
+.course-player>h2{
+   font-size: 24px;
+   font-weight: 600;
+}
+.course-player>h3{
+   font-weight: 500;
+   color: #999;
+}
+.learn-link{
+   color: #1976d2;
+   font-weight: 600;
+}
+.learn-link:hover{
+   text-decoration: underline;
+}
+.user-rating-s{
+   display: none;
+}
+@media (max-width:900px) {
+   
+   .title-rating>h1{
+      font-size: 16px;
+      margin-bottom: 0;
+   }
+   .title-rating{
+      /* flex-direction: column; */
+      align-items: flex-start;
+   }
+   .learning-curriculum{
+      overflow: visible;
+      position: static;
+   }
+   .course-learning{
+      padding: 0;
+   }
+   .learning-main{
+      grid-template-columns: 12fr;
+      height: auto;
+      gap: 10px;
+   }
+  
+   .course-player{
+      position: sticky;
+      top: 0px;
+      z-index: 3;
+      background-color: #fff;
+      padding: 20px 0px;
+      /* border-bottom: 1px solid #999; */
+   }
+   .course-player>h2{
+      font-size: 14px;
+      font-weight: 600;
+   }
+   .course-player>h3{
+      font-size: 13px;
+      color: #999;
+      font-weight: 500;
+   }
+   
+   .learning-close{
+      display: none;
+   }
+   .learning-curriculum-head>h3{
+      font-size: 16px;
+   }
+   .accordion-learn>h3{
+      font-size: 16px;
+   }
+   .user-rating-l{
+      display: none;
+   }
+   .user-rating-s{
+      display: block;
+      text-align: center;
+      margin: 10px;
+   }
+}
