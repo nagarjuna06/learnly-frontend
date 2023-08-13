@@ -44,9 +44,6 @@ export const signupOtpVerify = createAsyncThunk(
   async (body, { rejectWithValue }) => {
     try {
       const response = await axios.post(`${API}/auth/verify`, body);
-      setTimeout(() => {
-        window.location.reload();
-      }, 500);
       return response;
     } catch (error) {
       return rejectWithValue(error);
@@ -316,12 +313,8 @@ const authSlice = createSlice({
   reducers: {
     logout: (state) => {
       Cookies.remove("_token");
-      Object.assign(state, initialState);
-      setTimeout(() => {
-        if (location.pathname !== "/login") {
-          location.href = "/login";
-        }
-      }, 1000);
+      state.isAuthenticated = false;
+      state.profile = null;
     },
     clear: (state) => {
       state.loading = false;
@@ -368,12 +361,13 @@ const authSlice = createSlice({
         state.msg = false;
       })
       .addCase(signupOtpVerify.fulfilled, (state, action) => {
+        Cookies.set("_token", action.payload.jwtToken, { expires: 30 });
+        initialAuthenticate();
         state.loading = false;
         state.error = false;
         state.success = true;
         state.isAuthenticated = true;
         state.sendOtp = false;
-        Cookies.set("_token", action.payload.jwtToken, { expires: 30 });
       })
       .addCase(signupOtpVerify.rejected, (state, action) => {
         state.loading = false;

@@ -4,10 +4,15 @@ import Highlights from "../../course-landing-page/Highlights";
 import CustomizedAccordions from "../../../src/components/Accordion";
 import Requirements from "../../course-landing-page/Requirements";
 import Description from "../../course-landing-page/Description";
+import { Helmet } from "react-helmet";
+
 const CoursePreview = () => {
   const { course } = useSelector((state) => state.instructor);
   return (
     <div>
+      <Helmet>
+        <title>Course preview</title>
+      </Helmet>
       <CourseInfo {...course} />
       <div className="course-body">
         <Highlights data={course?.highlights} />

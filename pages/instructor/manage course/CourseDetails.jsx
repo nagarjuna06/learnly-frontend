@@ -14,6 +14,7 @@ import {
   updateInstructorCourseById,
 } from "../../../redux/slice/instructorSlice";
 import UploadCourseCover from "../../../src/components/Avatar/UploadCourseCover";
+import { Helmet } from "react-helmet";
 
 const CourseDetails = () => {
   const dispatch = useDispatch();
@@ -83,6 +84,9 @@ const CourseDetails = () => {
       onChange={handleChanges}
       onSubmit={handleSubmit}
     >
+      <Helmet>
+        <title>Course details</title>
+      </Helmet>
       <Header header="Course Details">
         <SaveButton loading={loading} success={success} />
       </Header>

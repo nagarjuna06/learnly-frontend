@@ -9,7 +9,7 @@ import { Img } from "../../../src/components/FromElements";
 import Images from "../../../src/components/Images";
 import InstructorCourseCard from "../../../src/components/Cards/InstructorCourseCard";
 import Header from "../../../src/components/NavBar/Header";
-
+import { Helmet } from "react-helmet";
 const InstructorCourses = () => {
   const dispatch = useDispatch();
   const { loading, courses, profile } = useSelector(
@@ -22,6 +22,9 @@ const InstructorCourses = () => {
   }, []);
   return (
     <div className="menu-content">
+      <Helmet>
+        <title>Instructor courses</title>
+      </Helmet>
       <Header header="Courses">
         <AddCourse />
       </Header>

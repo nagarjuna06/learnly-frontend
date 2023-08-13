@@ -1,9 +1,7 @@
 import { Dialog, DialogContent, Tooltip, IconButton } from "@mui/material";
-import ReactPlayer from "react-player";
 import { MdClose } from "react-icons/md";
 import "./popup.css";
 import { useState } from "react";
-import Images from "../Images";
 import { useSelector } from "react-redux";
 import VideoPlayer from "../VideoPlayer";
 const VideoPreview = ({ url, title }) => {

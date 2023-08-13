@@ -14,36 +14,32 @@ import { timeToString } from "../../src/utils";
 import Description from "./Description";
 import InstructorInfo from "./InstructorInfo";
 import Reviews from "./Reviews";
-import { setOg } from "../../redux/slice/ogSlice";
-
+import Images from "../../src/components/Images";
+import { Helmet } from "react-helmet";
 const CourseLandingPage = () => {
   const { slug } = useParams();
   const dispatch = useDispatch();
   const { course, loading } = useSelector((state) => state.course);
   useEffect(() => {
     dispatch(getCourse(slug));
-    return () => {
-      document.title = "Learnly";
-    };
   }, []);
-  useEffect(() => {
-    if (course) {
-      dispatch(
-        setOg({
-          title: course?.title,
-          description: course?.subtitle,
-          image: course?.coverImage,
-        })
-      );
-    }
-  }, [course]);
-  document.title = course?.title;
   return (
     <div className="course-landing-page">
       {loading ? (
         <CircleLoading />
       ) : (
         <div>
+          <Helmet>
+            <title>{course?.title}</title>
+            <meta title={course?.title} />
+            <meta property="og:title" content={course?.title} />
+            <meta property="og:description" content={course?.subtitle} />
+            <meta
+              property="og:image"
+              content={course?.coverImage || Images.videoThumbnail}
+            />
+            <meta property="og:url" content="https://learn-ly.netlify.app" />
+          </Helmet>
           <Header title={course?.title} />
           <CourseInfo {...course} />
           <div className="course-body">

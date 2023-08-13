@@ -13,7 +13,7 @@ const InstructorInfo = ({ data }) => {
         <div>
           <p>
             <MdStar />
-            <span>{data?.rating} Instructor rating</span>
+            <span>{parseFloat(data?.rating).toFixed(1)} Instructor rating</span>
           </p>
           <p>
             <RiShieldStarFill />

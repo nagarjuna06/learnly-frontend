@@ -35,6 +35,7 @@ const CustomAvatar = () => {
     navigate(path);
   };
   const handleLogout = () => {
+    handleClose();
     dispatch(logout());
   };
   const handleBecomeAnInstructor = async (path) => {

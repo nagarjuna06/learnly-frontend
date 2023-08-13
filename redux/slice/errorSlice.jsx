@@ -6,6 +6,20 @@ const initialState = {
   ApplicationError: false,
   serverStarted: false,
 };
+export const startTheServer = createAsyncThunk(
+  "startTheServer",
+  async (body, { rejectWithValue }) => {
+    try {
+      const response = await axios.get(API, body);
+      return response;
+    } catch (error) {
+      if (!error.response) {
+        throw error;
+      }
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
 const errorSlice = createSlice({
   name: "Application Errors",
   initialState,
@@ -18,6 +32,11 @@ const errorSlice = createSlice({
       state.ApplicationError = false;
       state.msg = null;
     },
+  },
+  extraReducers: (builders) => {
+    builders.addCase(startTheServer.fulfilled, (state) => {
+      state.serverStarted = true;
+    });
   },
 });
 

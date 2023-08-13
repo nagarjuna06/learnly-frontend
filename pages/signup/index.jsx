@@ -19,11 +19,11 @@ const SignUp = () => {
   useEffect(() => {
     dispatch(clear());
   }, []);
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     if (sendOtp) {
-      dispatch(signupOtpVerify(data));
+      await dispatch(signupOtpVerify(data));
     } else {
-      dispatch(signup(data));
+      await dispatch(signup(data));
     }
   };
   return (

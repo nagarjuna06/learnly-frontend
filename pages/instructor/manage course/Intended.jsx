@@ -10,6 +10,7 @@ import {
   updateInstructorCourseById,
 } from "../../../redux/slice/instructorSlice";
 import { convertToPoints } from "../../../src/utils";
+import { Helmet } from "react-helmet";
 
 const Intended = () => {
   const dispatch = useDispatch();
@@ -65,6 +66,9 @@ const Intended = () => {
       onSubmit={handleSubmit(onsubmit)}
       onChange={onchange}
     >
+      <Helmet>
+        <title>Intended Learners</title>
+      </Helmet>
       <Header header="Intended Learners">
         <SaveButton loading={loading} success={success} />
       </Header>

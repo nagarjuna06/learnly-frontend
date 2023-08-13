@@ -3,6 +3,8 @@ import Header from "../../../src/components/NavBar/Header";
 import { useState } from "react";
 import { MdContentCopy, MdOutlineCheck } from "react-icons/md";
 import { Tooltip, IconButton } from "@mui/material";
+import { Helmet } from "react-helmet";
+
 import "../index.css";
 const InstructorSettings = () => {
   const [copied, setCopied] = useState(false);
@@ -16,6 +18,9 @@ const InstructorSettings = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>Instructor settings</title>
+      </Helmet>
       <Header header={"Settings"}></Header>
       <div className="instructor-settings">
         <p>Email:</p>

@@ -1,14 +1,13 @@
-import {
-  AlertMsg,
-  CustomInput,
-  SaveButton,
-} from "../../../src/components/FromElements";
+import { AlertMsg, SaveButton } from "../../../src/components/FromElements";
 import CustomRadioGroup from "../../../src/components/FromElements/RadioGroup";
 import Header from "../../../src/components/NavBar/Header";
-
+import { Helmet } from "react-helmet";
 const Pricing = () => {
   return (
     <div className="instructor-course">
+      <Helmet>
+        <title>Pricing</title>
+      </Helmet>
       <Header header="Pricing">
         <SaveButton success />
       </Header>

@@ -24,6 +24,8 @@ import {
 } from "../../../src/utils";
 import { Alert } from "@mui/material";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
+
 const Settings = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -60,6 +62,9 @@ const Settings = () => {
   };
   return (
     <form className="instructor-course" onSubmit={onSubmit} onChange={onChange}>
+      <Helmet>
+        <title>Settings</title>
+      </Helmet>
       <Header header="Settings">
         <SaveButton loading={loading} success={success} />
       </Header>

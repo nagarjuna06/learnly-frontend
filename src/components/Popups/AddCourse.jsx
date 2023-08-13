@@ -28,7 +28,9 @@ const AddCourse = () => {
   };
 
   const onSubmit = async (data) => {
-    const res = await dispatch(instructorCreateCourse(data));
+    let formData = data;
+    formData.slug = data.title.replaceAll(" ", "-").toLowerCase();
+    const res = await dispatch(instructorCreateCourse(formData));
     if (res.meta.requestStatus === "fulfilled") {
       setOpen(false);
       dispatch(instructorCourses());

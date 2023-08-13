@@ -6,6 +6,8 @@ import { getCoursesByTeam } from "../../../redux/slice/instructorSlice";
 import InstructorCourseCard from "../../../src/components/Cards/InstructorCourseCard";
 import CircleLoading from "../../../src/components/Loading/Circle";
 import Images from "../../../src/components/Images";
+import { Helmet } from "react-helmet";
+
 const CollaboratedCourses = () => {
   const dispatch = useDispatch();
   const { collaboratedCourses, loading, profile } = useSelector(
@@ -23,6 +25,9 @@ const CollaboratedCourses = () => {
 
   return (
     <div className="menu-content">
+      <Helmet>
+        <title>Collaborated courses</title>
+      </Helmet>
       <>
         {loading ? (
           <CircleLoading />

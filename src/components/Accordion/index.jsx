@@ -65,7 +65,7 @@ const CustomizedAccordions = ({
   const [maxChapters, setMaxChapters] = useState(learn ? curriculum.length : 5);
 
   useEffect(() => {
-    setExpanded([videosData[progress]?.chId || 0]);
+    setExpanded(!viewOnly ? [videosData[progress]?.chId] : [0]);
   }, [progress]);
 
   const handleChange = (index) => (event, newExpanded) => {
@@ -99,10 +99,8 @@ const CustomizedAccordions = ({
                   className={
                     chIndex === videosData[progress]?.chId &&
                     index === videosData[progress]?.coId
-                      ? "content-active"
-                      : !viewOnly
-                      ? "content-inactive"
-                      : null
+                      ? !viewOnly && "content-active"
+                      : "content-inactive"
                   }
                   onClick={() => handleContentClick(chIndex, index)}
                 >

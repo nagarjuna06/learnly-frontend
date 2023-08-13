@@ -38,16 +38,26 @@ import MyCourses from "../pages/my-learning/MyCourses";
 import CourseLearning from "../pages/my-learning/CourseLearning";
 import SearchCourses from "../pages/home/SearchCourses";
 import CategoriesSearch from "../pages/home/CategoriesSearch";
-import OgTags from "./components/Og Tags";
-import { HelmetProvider } from "react-helmet-async";
+import Server from "./components/Popups/Server";
+import { Helmet } from "react-helmet";
+import Images from "./components/Images";
 
 if (!projectMode) {
   disableReactDevTools();
 }
 const App = () => {
   return (
-    <HelmetProvider>
-      <OgTags />
+    <div>
+      <Helmet>
+        <meta property="og:title" content="Learnly" />
+        <meta
+          property="og:description"
+          content="Best online courses learn to succeed | learnly"
+        />
+        <meta property="og:image" content={Images.logoIcon} />
+        <meta property="og:url" content="https://learn-ly.netlify.app" />
+      </Helmet>
+      <Server />
       <ErrorPopup />
       <OfflinePopup />
       <Routes>
@@ -153,7 +163,7 @@ const App = () => {
         </Route>
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-    </HelmetProvider>
+    </div>
   );
 };
 

@@ -10,6 +10,7 @@ import "../index.css";
 import { useDispatch, useSelector } from "react-redux";
 import { convertNestedObject, convertNormalObject } from "../../../src/utils";
 import UploadAvatar from "../../../src/components/Avatar/UploadAvatar";
+import { Helmet } from "react-helmet";
 import {
   changes,
   instructorProfileUpdate,
@@ -90,6 +91,9 @@ const InstructorProfile = () => {
 
   return (
     <div className="menu-content">
+      <Helmet>
+        <title>Instructor profile</title>
+      </Helmet>
       {convertProfile ? (
         <form
           className="instructor-profile"

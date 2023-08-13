@@ -19,6 +19,8 @@ import {
   addDurationToCurriculum,
   isAllChaptersFilled,
 } from "../../../src/utils";
+import { Helmet } from "react-helmet";
+
 const Curriculum = () => {
   const dispatch = useDispatch();
   const curriculumLength = useSelector(
@@ -48,6 +50,9 @@ const Curriculum = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>Curriculum</title>
+      </Helmet>
       {curriculumLength ? (
         <div>
           <Header header="Curriculum">
