@@ -1,9 +1,8 @@
 # Welcome to Learnly - Your Ultimate E-Learning Platform
 
-<div style='display:flex;align-items:center;flex-direction:column;width:100%'>
+<p align='center'>
 <img src="./src/assets/logo-icon.png" alt="Learnly Logo" width="100"/>
-<h1>learnly</h1>
-</div>
+</p>
 
 Learnly is an innovative e-learning application designed to provide a seamless and engaging learning experience for both learners and instructors. Whether you're a curious learner looking to expand your knowledge or an expert wanting to share your expertise, Learnly has you covered.
 
