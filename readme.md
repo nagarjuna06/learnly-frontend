@@ -1,6 +1,6 @@
 # Welcome to Learnly - Your Ultimate E-Learning Platform
 
-<div style='display:flex;align-items:center;flex-direction:column;'>
+<div style='display:flex;align-items:center;flex-direction:column;width:100%'>
 <img src="./src/assets/logo-icon.png" alt="Learnly Logo" width="100"/>
 <h1>learnly</h1>
 </div>
